@@ -1,0 +1,169 @@
+/* Importer des polices d'écriture depuis Google Fonts */
+/* @import url('https://fonts.googleapis.com/css2?family=Gajraj+One&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap'); */
+
+/* Importer des polices d'écriture depuis le dossier fonts local */
+@font-face {
+    font-family: "AnkhSactuary";
+    src: url(../fonts/AnkhSanctuary/AnkhSanctuary-nROx4.ttf);
+}
+
+@font-face {
+    font-family: "DripOctober";
+    src: url(../fonts/DripOctober/DripOctober-vm0JA.ttf);
+}
+
+@font-face {
+    font-family: "BruceForever";
+    src: url(../fonts/BruceForever/BruceForeverRegular-X3jd2.ttf);
+}
+
+@font-face {
+    font-family: "Progress";
+    src: url(../fonts/Progress/ProgressPersonalUse-EaJdz.ttf);
+}
+
+/* CSS */
+
+body {
+    background-color: #333;
+    color: white;
+}
+
+p {
+    font-size: 15pt;
+    margin: 40px 0;
+}
+
+.card_presentation {
+    display: flex;
+    justify-content: center;
+}
+
+.id_card {
+    display: flex;
+    justify-content: center;
+    background-image: linear-gradient(-45deg, rgb(0, 114, 195) 0%, rgb(66, 0, 153) 100%);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 30px black;
+}
+
+.id_card .game_infos {
+    margin-left: 10px;
+}
+
+.id_card .game_infos .page_title {
+    display: flex;
+    font-family: "BruceForever", sans-serif;
+    border-bottom: 5px dashed #111;
+}
+
+.id_card .game_infos .game_date,
+.id_card .game_infos .game_studio,
+.id_card .game_infos .game_types {
+    display: block;
+    font-size: medium;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.id_card .game_infos .game_date .date,
+.id_card .game_infos .game_studio .studio,
+.id_card .game_infos .game_types .type {
+    color: rgb(255, 90, 90)
+}
+
+.id_card .image_profile img {
+    display: flex;
+    max-width: 250px;
+    border-radius: 20px;
+}
+
+.div_game_resume,
+.game_page {
+    display: flex;
+    justify-content: center;
+}
+
+.div_game_resume #game_resume {
+    max-width: 50%;
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.game_page {
+    flex-wrap: wrap;
+}
+
+.game_page_element {
+    display: block;
+    min-width: 60%;
+    max-width: 60%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+}
+
+.game_page_img img {
+    max-width: 100%;
+    border-radius: 18px;
+    box-shadow: 0 0 40px black;
+}
+
+
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    border-top: 2px dashed white;
+    margin-top: 60px;
+}
+
+footer a {
+    text-decoration: none;
+    color: cyan;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+footer h3 {
+    font-family: "BruceForever", sans-serif;
+    font-weight: lighter;
+}
+
+footer #navigate {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.text-right {
+    justify-content: flex-end;
+}
+
+footer #navigate .navigate_element {
+    display: flex;
+    min-width: 46%;
+    margin: 0 2%;
+}
+
+footer .my_footer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+footer .my_footer .my_footer_element {
+    display: flex;
+    min-width: 31%;
+    margin: 0;
+    padding: 0;
+    flex-direction: column;
+    text-align: center;
+}
+
+footer .my_footer .my_footer_element .links,
+footer .my_footer .my_footer_element .links a p {
+    display: block;
+    margin: 0;
+    padding: 0;
+}

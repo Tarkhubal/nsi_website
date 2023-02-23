@@ -1,4 +1,4 @@
-/* CSS principal pour un site web qui référence des projets de jeux qui n'ont pas été terminé, style retro */
+/* CSS principal pour un site web qui référence des projets de jeux qui n'ont pas été terminé, ou qui ont été abandonnés, style retro */
 
 /* Importer des polices d'écriture depuis Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Gajraj+One&display=swap');
@@ -30,40 +30,63 @@
  * Unités de mesure : https://www.w3.org/Style/Examples/007/units.fr.html
 
  * Gradients : https://developer.mozilla.org/fr/docs/Web/CSS/gradient
- * linear-gradient, radial-gradient, conic-gradient etc...
+ linear-gradient, radial-gradient, conic-gradient etc...
 
+
+
+ *** Forme des explications ***
+ -> Elément CSS
+ -> Explication de l'élément
 */
 
 /* Début du CSS du site */
 body {
-    background-color: #222222; /* couleur de fond */
-    color: white; /* couleur du text */
-    font-family: 'BruceForever'; /* police d'écriture */
-    height: 100%; /* hauteur de la page */
+    background-color: #222222;
+    /* couleur de fond */
+    color: white;
+    /* couleur du text */
+    font-family: 'BruceForever';
+    /* police d'écriture */
+    height: 100%;
+    /* hauteur de la page */
 }
 
 body .title_div {
-    width: 100%; /* largeur de la box */
-    display: flex; /* https://developer.mozilla.org/fr/docs/Web/CSS/flex  */
-    justify-content: center; /* Permet de centrer les éléments (avec display: flex) */
+    width: 100%;
+    /* largeur de la box */
+    display: flex;
+    /* https://developer.mozilla.org/fr/docs/Web/CSS/flex  */
+    justify-content: center;
+    /* Permet de centrer les éléments (avec display: flex) */
 }
 
 body .title_div h1 {
-    border-radius: 15px; /* arrondissemnt des angles de la bordure */
-    box-shadow: 0 0 10px 0 #000000; /* ombre de la box */
-    padding: 30px 70px; /* espacement interne de la box */
-    margin-bottom: 10px; /* espacement entre la box actuelle et la box suivante */
-    margin-top: 0; /* on enlève l'espacement entre la box actuelle et la box précédente */
-    background-image: radial-gradient(circle farthest-corner at 10% 20%, rgb(24, 24, 24) 11.2%, rgb(51, 51, 51) 91.1%); /* permet de faire un dégradé de couleur */
-    font-size: 5em; /* taille de la police */
-    font-family: 'BruceForever', sans-serif; /* police d'écriture */
-    text-align: center; /* aligner le texte horizontalement au centre */
-    max-width: 50%; /* largeur maximale de la box */
+    border-radius: 15px;
+    /* arrondissemnt des angles de la bordure */
+    box-shadow: 0 0 10px 0 #000000;
+    /* ombre de la box */
+    padding: 30px 70px;
+    /* espacement interne de la box */
+    margin-bottom: 10px;
+    /* espacement entre la box actuelle et la box suivante */
+    margin-top: 0;
+    /* on enlève l'espacement entre la box actuelle et la box précédente */
+    background-image: radial-gradient(circle farthest-corner at 10% 20%, rgb(24, 24, 24) 11.2%, rgb(51, 51, 51) 91.1%);
+    /* permet de faire un dégradé de couleur */
+    font-size: 5em;
+    /* taille de la police */
+    font-family: 'BruceForever', sans-serif;
+    /* police d'écriture */
+    text-align: center;
+    /* aligner le texte horizontalement au centre */
+    max-width: 50%;
+    /* largeur maximale de la box */
 }
 
 .sub_title_div {
     width: 100%;
-    display: flex; /* idem que plus haut */
+    display: flex;
+    /* idem que plus haut */
     justify-content: center;
 }
 
@@ -72,19 +95,26 @@ body .title_div h1 {
     max-width: 65%;
     display: flex;
     justify-content: center;
-    flex-wrap: wrap; /* permet de faire des retours à la ligne quand il y a display: flex */
-    border-top: 3px dashed #ff0000; /* forme, épaisseur et couleur de la bordure du haut */
-    border-bottom: 3px dashed #ff0000; /* forme, épaisseur et couleur de la bordure du bas */
+    flex-wrap: wrap;
+    /* permet de faire des retours à la ligne quand il y a display: flex */
+    border-top: 3px dashed #ff0000;
+    /* forme, épaisseur et couleur de la bordure du haut */
+    border-bottom: 3px dashed #ff0000;
+    /* forme, épaisseur et couleur de la bordure du bas */
     border-radius: 20px;
-    background-image: none; /* on enlève le dégradé de couleur */
-    transition: all 0.2s ease-in-out; /* permet de faire une transition */
+    background-image: none;
+    /* on enlève le dégradé de couleur */
+    transition: all 0.2s ease-in-out;
+    /* permet de faire une transition */
     /*  all = toutes les propriétés de la box
         0.2s = durée de la transition
         ease-in-out = type de transition (ici une transition douce) */
 }
 
-.subtitles:hover { /* quand on passe la souris sur l'élément */
-    background-color: transparent; /* on enlève la couleur de fond */
+.subtitles:hover {
+    /* quand on passe la souris sur l'élément */
+    background-color: transparent;
+    /* on enlève la couleur de fond */
     transition: all 0.2s ease-in-out;
     background-image: linear-gradient(180deg, #222 0%, #500404 100%);
     border-top: 3px dashed #ff0000;
@@ -97,14 +127,22 @@ body .title_div h1 {
 .subtitles .subtitle {
     display: flex;
     font-size: 2.5em;
-    font-family: 'Progress', sans-serif; /* police importée localement en haut du fichier CSS */
-    text-align: center; /* aligner que le texte au centre */
-    margin: 0; /* on enlève l'espacement externe */
-    padding: 0; /* et l'interne */
-    min-width: 65%; /* largeur minimale de la box */
-    max-width: 100%; /* largeur maximale de la box */
-    justify-content: center; /* aligner les éléments à l'intérieur de la box horizontalement au centre : https://developer.mozilla.org/fr/docs/Web/CSS/justify-content */
-    align-items: center; /* aligner les éléments à l'intérieur de la box verticalement au centre : https://developer.mozilla.org/fr/docs/Web/CSS/align-items*/
+    font-family: 'Progress', sans-serif;
+    /* police importée localement en haut du fichier CSS */
+    text-align: center;
+    /* aligner que le texte au centre */
+    margin: 0;
+    /* on enlève l'espacement externe */
+    padding: 0;
+    /* et l'interne */
+    min-width: 65%;
+    /* largeur minimale de la box */
+    max-width: 100%;
+    /* largeur maximale de la box */
+    justify-content: center;
+    /* aligner les éléments à l'intérieur de la box horizontalement au centre : https://developer.mozilla.org/fr/docs/Web/CSS/justify-content */
+    align-items: center;
+    /* aligner les éléments à l'intérieur de la box verticalement au centre : https://developer.mozilla.org/fr/docs/Web/CSS/align-items*/
 }
 
 .subtitles .subtitle .sub_attack {
@@ -124,7 +162,7 @@ body .title_div h1 {
     margin-bottom: 10px;
     background-image: radial-gradient(circle farthest-corner at 10% 20%, rgb(24, 24, 24) 11.2%, rgb(51, 51, 51) 91.1%);
     display: flex;
-    font-size: 4em;
+    font-size: 3em;
     font-weight: 300;
     font-family: 'BruceForever', sans-serif;
     justify-content: center;
@@ -134,7 +172,8 @@ body .title_div h1 {
 
 body a {
     color: white;
-    text-decoration: none; /* enlève le soulignement du texte et autre décorations */
+    text-decoration: none;
+    /* enlève le soulignement du texte et autre décorations */
 }
 
 body a:hover {
@@ -146,16 +185,12 @@ body a:visited {
 }
 
 
-
-
-
-
 .games_tab {
     width: 100%;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    font-family: Progress;
+    font-family: "BruceForever";
 }
 
 .container {
@@ -168,7 +203,8 @@ body a:visited {
 }
 
 .container .card {
-    position: relative; /* docs : https://developer.mozilla.org/fr/docs/Web/CSS/position (trop chiant à expliquer en texte) */
+    position: relative;
+    /* docs : https://developer.mozilla.org/fr/docs/Web/CSS/position (trop chiant à expliquer en texte) */
 }
 
 .container .card .face {
@@ -182,16 +218,21 @@ body a:visited {
     position: relative;
     background: #333;
     display: flex;
+    /* docs : https://developer.mozilla.org/fr/docs/Web/CSS/display */
     justify-content: center;
     align-content: center;
     align-items: center;
-    z-index: 1; /* "couche" où est positionné l'élément (plus le chiffre est grand plus c'est "proche" de l'écran) (ex: 10000 = il se verra tout le temps) */
-    transform: translateY(100px); /* déplacer l'élément de 100px vers le bas */
+    z-index: 1;
+    /* "couche" où est positionné l'élément (plus le chiffre est grand plus c'est "proche" de l'écran) (ex: 10000 = il se verra tout le temps) */
+    transform: translateY(100px);
+    /* déplacer l'élément de 100px vers le bas */
 }
 
 .container .card:hover .face.face1 {
-    transform: translateY(0); /* remettre l'élément à sa place */
-    box-shadow: /* ombre très compliquée */
+    transform: translateY(0);
+    /* remettre l'élément à sa place */
+    box-shadow:
+        /* ombre très compliquée */
         inset 0 0 40px whitesmoke,
         inset 20px 0 60px #f00,
         inset -20px 0 60px #f00,
@@ -204,25 +245,18 @@ body a:visited {
 }
 
 .container .card .face.face1 .content {
-    opacity: .2; /* changer l'opacité de l'élément (0 = transparent, 1 = opaque) */
+    opacity: 0.2;
+    /* changer l'opacité de l'élément (0 = transparent, 1 = opaque) */
     transition: 0.5s;
     text-align: center;
 }
 
 .container .card:hover .face.face1 .content {
     opacity: 1;
-
-}
-
-.container .card .face.face1 .content i {
-    font-size: 3em;
-    color: white;
-    display: inline-block; /* docs : https://developer.mozilla.org/fr/docs/Web/CSS/display */
-
 }
 
 .container .card .face.face1 .content h3 {
-    font-size: 3em;
+    font-size: 2.5em;
     color: white;
     text-align: center;
 }
@@ -245,13 +279,11 @@ body a:visited {
 
 .container .card:hover .face.face2 {
     transform: translateY(0);
-
-
 }
 
 .container .card .face.face2 .content p,
 a {
-    font-size: 10pt;
+    font-size: 8pt;
     margin: 0;
     padding: 0;
     color: #333;
@@ -272,6 +304,69 @@ a {
     color: whitesmoke;
     box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
+
+
+
+
+
+
+
+.btn {
+    display: inline-block;
+    padding: 1em 1.6em;
+    border-radius: 3px;
+    margin-top: 2rem;
+    font-weight: bold;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    transition: all 250ms ease;
+}
+
+.btn:hover {
+    color: white;
+}
+
+.btn:hover:after {
+    -webkit-animation-name: bgin;
+    animation-name: bgin;
+    transform: skew(-45deg) translate(-50%);
+}
+
+.btn:after {
+    content: "";
+    z-index: -1;
+    width: 150%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    -webkit-animation-name: bgout;
+    animation-name: bgout;
+    -webkit-animation-duration: 400ms;
+    animation-duration: 400ms;
+    transform: skew(-45deg) translate(-150%);
+}
+
+
+.btn--blue {
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
+    color: #505959;
+    letter-spacing: 2px;
+    padding: 1.2em 2.2em;
+}
+
+.btn--blue:hover {
+    color: #00d2ff;
+    box-shadow: 0 27px 55px rgba(0, 0, 0, 0.3), 0 17px 17px rgba(0, 0, 0, 0.15), 0 0 0 1px rgba(0, 0, 0, 0);
+}
+
+
+
 
 
 
